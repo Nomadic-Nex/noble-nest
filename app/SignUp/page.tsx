@@ -47,8 +47,6 @@ const SignUp = () => {
         <p className="text-white font-normal text-sm text-center">
           _________________________________ or _________________________________
         </p>
-        <Button className="bg-white text-black text-medium text-center p-3">Sign in with Email</Button>
-        <Button className="bg-white text-black text-medium text-center p-3">Sign in with Apple</Button>
         <Button className="bg-white text-black text-medium text-center p-3">Sign in with Google</Button>
         <p className="text-white font-medium text-base text-center">
           Don't have an account? <span><Link href="#" underline="always">Sign Up</Link></span>
