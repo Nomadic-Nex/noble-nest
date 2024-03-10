@@ -17,8 +17,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between">
-      <div className="w-[1200px] h-[89px] mt-3 p-3 justify-center">
+    <main className="bg-gradient-to-b from-stone-400 to-slate-500 flex min-h-screen flex-col justify-between">
+      <div className="flex flex-row w-[1200px] h-[89px] mt-3 p-3 justify-center items-center">
         <Navbar/>
       </div>
       <section className="bg-gradient-to-r from-color-start to-color-end h-[38.563rem] w-[84.375rem] rounded-3xl flex justify-center items-center ml-12">
