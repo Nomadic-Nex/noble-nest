@@ -1,59 +1,32 @@
 "use client"
 
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
-import { Button, Input, Link } from "@nextui-org/react";
-import { EyeSlashFilledIcon } from "../../../public/eyeFilled";
-import {EyeFilledIcon} from "../../../public/eyeClosed";
-import Email from "../../../public/email.png";
-import Apple from "../../../public/apple.png";
-import Google from "../../../public/google.png";
+import { Checkbox, Input, Link, Button } from "@nextui-org/react";
 import Noble from "../../../public/noblenest.png";
 
 const SignUp = () => {
-  const [isVisible, setIsVisible] = React.useState(false);
-  const toggleVisibility = () => setIsVisible(!isVisible);
-
+  const [isSelected, setIsSelected] =useState(false);
   return (
     <main className="w-full min-h-screen bg-black bg-authbg bg-[length:900px_1050px] bg-no-repeat bg-center flex flex-col justify-center items-center">
-      {/* Centered "Noble Nest" heading at the top */}
       <Image src={Noble} width={307} height={76} alt="logo"/>
-
-      {/* Section containing inputs and buttons, centered below the heading */}
-      <section className="flex flex-col gap-5 justify-center align-middle mr-5 mt-10">
+      <section className="flex flex-col gap-5 justify-center align-middle mr-5 mt-10 p-5">
         <h1 className="text-black text-left font-semibold text-xl">Sign in</h1>
-        <Input type="text" variant="flat" label="Username" placeholder="Enter your Username" />
-        <Input
-          label="Password"
-          variant="flat"
-          placeholder="Enter your password"
-          endContent={
-            <button className="focus:outline-none" type="button" onClick={toggleVisibility}>
-              {isVisible ? (
-                <EyeFilledIcon className="text-2xl text-default-400 pointer-events-none" />
-              ) : (
-                <EyeSlashFilledIcon className="text-2xl text-default-400 pointer-events-none" />
-              )}
-            </button>
-          }
-          type={isVisible ? "text" : "password"}
-        />
+        <Input type="text" variant="flat" label="Name" placeholder="Enter your Name"/>
+        <Input type="tel" variant="flat" label="Phone Number" placeholder="Enter your Phone number" />
+        <Input type="email" variant="flat" label="Email" placeholder="Enter your Email" />
+        <Input type="password" variant="flat" label="Password" placeholder="Enter your Password" />
+        <Checkbox checked={isSelected} onChange={(e) => setIsSelected(e.target.checked)}>
+          <span className="text-white font-light text-base text-center">
+            I agree to the <span className="text-white font-semibold text-base text-center">Terms of Service</span>
+          </span>
+        </Checkbox>
         <Button radius="md" className="bg-black text-white text-medium text-md p-3">
-          Login
+          Register
         </Button>
-        <p className="text-white font-normal text-sm">
-          By continuing you agree to Noble Nests's Terms of service and Privacy Policy
-        </p>
-        <p className="text-white font-normal text-sm text-center">
-          _________________________________ or _________________________________
-        </p>
-        <Button className="bg-white text-black text-medium text-center p-3">Sign in with Google</Button>
-        <p className="text-white font-medium text-base text-center">
-          Don't have an account? <span><Link href="#" underline="always">Sign Up</Link></span>
-        </p>
+        <p>Already hava an account? <span><Link href="/" underline="hover">Login</Link></span></p>
       </section>
     </main>
   );
 };
-
 export default SignUp;

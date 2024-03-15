@@ -4,7 +4,7 @@ import Hero from "../../public/Hero1.png";
 import Mssg from "../../public/messages.png";
 import Edit from "../../public/edit-2.png";
 import Sms from "../../public/sms-tracking.png"
-import Slider from "../../components/propertyCarousel";
+import Slider from "../../components/propertyCarousel"; //
 import Display from '../../public/display.png';
 import News from "../../public/newsltter.png";
 import Bed from "../../public/bedSuite.png";
@@ -17,27 +17,15 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between">
-      <div className="w-[1200px] h-[89px] mt-3 p-3 justify-center">
-        <Navbar/>
-      </div>
-      <section className="bg-gradient-to-r from-color-start to-color-end h-[38.563rem] w-[84.375rem] rounded-3xl flex justify-center items-center ml-12">
-        <div className="p-8">
-          <h4 className="text-black font-light">Welcome to Noble Nest</h4>
-          <h1 className="font-extrabold pt-6 text-6xl">Manage your<br></br> property</h1>
-          <h4 className="font-light pt-14">Experience unparalleled convenience with nearby amenities<br></br>ensuring everything you need is easily accessible.</h4>
-          <div className="inline-flex pt-10">
-            <input type="text" className="bg-white w-[27.375 rem] h-[3.75 rem] rounded-xl pl-3 py-2" placeholder="Enter your Email"></input>
-            <button className="bg-black text-white font-normal text-sm rounded-2xl w-[27.375 rem] h-[3.75 rem] px-3 py-2 hover:bg-sky-600 drop-shadow-md">Get a quote</button>
+    <main className="bg-gradient-to-b from-rose-200 to-color-end flex min-h-screen flex-col justify-between">
+      <div className="flex flex-row justify-end items-center">
+        <div className="bg-landbg w-full h-[1200px] p-5">
+          <Navbar/>
+          <div className="text-black text-left flex flex-row gap-4 p-5 justify-end">
+              <h1 className="text-6xl font-bold ">Manage your <br></br>properties.<br></br><span className="text-2xl font-semibold mt-5">Experience unparalleled convenience with nearby amenities<br/>ensuring everything you need is easily accessible</span></h1>
           </div>
         </div>
-        <Image
-          src={Hero}
-          width={785}
-          height={667}
-          alt="hero"
-        />
-      </section>
+      </div>
       <section className="flex flex-col">
         <h4 className="font-light text-base text-center mt-2">Three steps. Three minutes.</h4>
         <h1 className="font-bold text-6xl text-center mt-5">Everything should be this easy.</h1>
@@ -123,7 +111,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gradient-to-r from-color-start to-color-end h-[24.83rem] w-[84.375rem] rounded-3xl flex flex-col justify-between items-start ml-12 mt-6 p-5">
+      <section className="bg-gradient-to-r from-blue-100 via-rose-100 to-orange-100 h-[24.83rem] w-[84.375rem] rounded-3xl flex flex-col justify-between items-start ml-12 mt-6 p-5">
         <div className="flex flex-row gap-10">
           <div className="p-4">
             <h2 className="text-black font-bold text-5xl text-left">Subscribe to our newsletter</h2>
@@ -174,7 +162,7 @@ export default function Home() {
           <div className="absolute top-10 left-28 w-[34.196rem] h-[33.553rem] bg-[#F0CAC5] rounded-t-full -z-10"></div>
         </div>
       </section>
-      <footer className="bg-gradient-to-r from-color-start to-color-end w-[84.375rem] h-[31.188 rem] rounded-3xl flex flex-row gap-6 p-8 mt-10 justify-around ml-14">
+      <footer className="bg-gradient-to-r from-blue-200 via-rose-100 to-rose-200 w-[84.375rem] h-[31.188 rem] rounded-3xl flex flex-row gap-6 p-8 mt-10 justify-around ml-14">
         <div>
           <Image src={Ficon} width={258} height={52.04} alt="icon"/>
         </div>
